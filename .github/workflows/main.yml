@@ -17,7 +17,7 @@ jobs:
       - name: SSH commands to deploy
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ 134.209.228.130 }}  
+          host: ${{ 134.209.228.130:8000 }}  
           username: ${{ PASSWORD }}  
           password: ${{ Tedige246 }}  # Пароль для SSH
           port: 22  
