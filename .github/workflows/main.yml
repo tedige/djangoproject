@@ -1,0 +1,30 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: [3.6]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: SSH commands to deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ 134.209.228.130 }}  
+          username: ${{ PASSWORD }}  
+          password: ${{ Tedige246 }}  # Пароль для SSH
+          port: 22  
+          script: |
+            cd /root/venv/djangoproject/djangoproject  
+            source ./venv/bin/activate  
+            git pull origin master  
+            python manage.py migrate  
+            python manage.py collectstatic --noinput  
+            supervisorctl restart all  
