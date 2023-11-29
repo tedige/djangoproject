@@ -19,7 +19,7 @@ jobs:
         with:
           host:  134.209.228.130 
           username: ${{ PASSWORD }}  
-          password: ${{ Tedige246 }}  # Пароль для SSH
+          password: ${{ Tedige246 }}  
           port: 8000  
           script: |
             cd /root/venv/djangoproject/djangoproject  
