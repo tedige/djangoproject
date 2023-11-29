@@ -28,6 +28,7 @@ jobs:
 
       - name: Run Tests
         run: |
+          cd djangoproject
           python manage.py test
 
       - name: SSH commands to deploy
