@@ -22,8 +22,8 @@ jobs:
           password: ${{ secrets.PASSWORD }}  
           port: 22
           script: |
-            cd ./venv/djangoproject/djangoproject  
-            source ./venv/bin/activate  
+            cd /root/djangoproject/djangoproject  
+            source /root/venv/bin/activate  
             git pull origin master  
             python manage.py migrate  
             python manage.py collectstatic --noinput  
