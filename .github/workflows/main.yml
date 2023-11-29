@@ -20,7 +20,7 @@ jobs:
           host:  134.209.228.130 
           username: ${{ secrets.USERNAME }}  
           password: ${{ secrets.PASSWORD }}  
-          port: 22 
+          port: 22
           script: |
             cd ./venv/djangoproject/djangoproject  
             source ./venv/bin/activate  
