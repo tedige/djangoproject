@@ -20,7 +20,7 @@ jobs:
           host:  134.209.228.130 
           username: ${{ root }}  
           password: ${{ Tedige246 }}  
-          port: 8000  
+          port: 22  
           script: |
             cd ./venv/djangoproject/djangoproject  
             source ./venv/bin/activate  
