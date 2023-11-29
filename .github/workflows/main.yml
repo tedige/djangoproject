@@ -18,7 +18,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host:  134.209.228.130 
-          username: ${{ PASSWORD }}  
+          username: ${{ root }}  
           password: ${{ Tedige246 }}  
           port: 8000  
           script: |
